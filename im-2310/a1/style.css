@@ -1,0 +1,111 @@
+/* Comments in CSS are written like this */
+
+/*
+Due to the cascade and specificity (see The Cascade section of the worksheet) I tend 
+to organise my CSS files in an order that reflects this with element selectors at the 
+top, followed by classes and then ids. In more complex projects I sometimes change this 
+and instead orgainse the CSS by how they are laid out on the page/s.
+*/
+
+/* 
+This is a selector I didn't cover in the worksheet but * refers to all elements.
+if we place it first like this it will override some of the browser's default style but 
+won't mess with any of the custom rules I apply below it.
+ */
+ * {
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  
+  body {
+    color: #4a4947;
+    background-color: #f4eeef;
+    font-family: 'Arvo',sans-serif;
+  }
+
+  .favconleft {
+    float: left;
+  }
+
+  h1 {
+    padding:100px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    border-style: double;
+    border-color: #423f3a;
+    border-width: 0 0 3px 0;
+}
+  
+  img {
+    align-content: center;
+  }
+
+  .imagedesc {
+    margin:auto;
+    width: 50%;
+    text-align: center;
+    font-style: italic;
+    color:#7e7d7a;
+    font-size: 15px;
+  }
+
+  .imageright{
+    float: right;
+  }
+
+  .imageleft{
+    float: left;
+    width: 40%;
+    
+  }
+
+  /* Clearfix (clear floats) */
+.imagetable::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+  
+  ul, ol {
+    list-style-position: inside;
+    padding-top: 15px;
+    font-size: 1.25rem;
+  }
+  
+  /*
+  This is another new selector combination not covered in the worksheet - 
+  putting two selectors together without a comma means that it will be applied 
+  to the child of the first selector - so this ruleset will only work on <li> 
+  elements that are inside of <ol> elements, not those inside <ul>.
+  */
+  ol li {
+    margin-bottom: .5rem;
+  }
+
+  
+  /* the box sections */
+  .section-box {
+    max-width: 80%;
+    display: block;
+    background-color:#dfcccf;
+    border-style: solid;
+    border-color: #b1acad;
+    border-width: 5px;
+    padding: 25px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    overflow: auto;
+  }
+
+  .section-box-shadow {
+    box-shadow: 0px 5px 5px #b1acad;
+  }
+
+  .wkthreesec{
+    padding-top: 50px;
+  }
