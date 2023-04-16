@@ -1,0 +1,152 @@
+/* z-index order */
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+/* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
+/* https://lospec.com/palette-list/1bit-monitor-glow */
+/* you're welcome to change the colours if you want or any of the other general page style */
+:root{
+  --col-01:#222323;
+  --col-02:#f0f6f0;
+  --col-03:#5252ff;
+  --col-04:#b6e878;
+  --border: 1px solid var(--col-02);
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--col-01);
+  color: var(--col-02);
+  padding: 2vw;
+}
+
+/*
+  i've set up a basic flexbox for each recipe container - you might want to change some of the 
+  flex properties here on the container or on the individual flex items depending on how you want to style them
+*/
+.RecipeBox{
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
+}
+
+.FilterSection{
+  padding: 10px;
+}
+
+.FilterBox{
+  float:left;
+  margin: 5px;
+  margin-left:15px;
+  padding: 10px;
+  background-color:rgba(255, 183, 0, 0.427); /*
+  I tried to stylize the filterbox buttons to fit with the aesthetic of the webpage. I had looked at some fast food restaurant webpages and
+  taken note of the colors they used which was usually bright colours. I had intended to use red or yellow initially but opted to go for a darker tone
+  since it would fit more with the dark background and instead looked up for interesting fonts which are used for restaurant menus. I intended
+  to use the font to bring out the "menu" look and chose to go with the Dynapuff font. I felt that the font was less intimidating and it would
+  bring out a less intimidating and more playful, welcoming feeling of cooking.
+*/
+  color:aliceblue;
+  font-family: 'DynaPuff', cursive;  
+  font-weight: bolder;
+  box-shadow: 0px 0px 0px 2px #f0f6f0;
+}
+
+.FilterBox summary{
+  list-style: none;
+  cursor: pointer;
+}
+
+.FilterButton{
+  background-color: ghostwhite;
+  padding: 10px;
+  box-shadow: 2px 2px 2px #222323;
+  margin-left: 2px;
+  margin-top: 10px;
+  font-family: 'Patrick Hand', cursive;
+
+}
+
+.SelectedFilter{
+  background-color:#222323;
+  color: whitesmoke;
+}
+
+/*
+  Similarly here, I was going to use a stronger shade of red but the contrast between the black background was too strong. I decided to settle on
+  a lighter shade of red instead which would clearly indicate where the user is hovering the cursor over
+*/
+button:hover{
+  background-color: lightcoral;
+  color: whitesmoke;
+}
+
+.RecipeLink{
+
+}
+
+.RecipeName{
+
+}
+
+.Author{
+
+}
+
+.RecipeImageContainer{
+
+}
+
+.RecipeImg{
+
+}
+
+.Attribution{
+
+}
+
+.Publisher{
+
+}
+
+.Cuisine{
+
+}
+
+.TimeToCook{
+
+}
+
+.SkillLevel{
+
+}
+
+.Course{
+
+}
+
+.Servings{
+
+}
+
+.Dietary{
+
+}
+
+.DatePublished{
+
+}
+
+.DateUpdated{
+
+}
+
+.SpecialEquipment{
+
+}
+
