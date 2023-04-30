@@ -1,0 +1,225 @@
+/*
+  This one CSS file is imported into both index.html AND hosono.html so you need to be careful that it 
+  works for both.
+*/
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+  /* first two colours come from Kuroi's Manga Pallete Palette */
+  /* https://lospec.com/palette-list/manga-pallete */
+  --col-01:#171219;
+  --col-02:#f2fbeb;
+  --col-03:#5252ff;
+  --col-04:#b6e878;
+  font-size: 16px;
+  /* scroll behaviour makes the <a> links to ids scroll to position over time rather than immediately */
+  scroll-behavior: smooth;
+}
+
+body{
+  padding: 1rem;
+  background-color: var(--col-02);
+  color: var(--col-01);
+  transition: 2s;
+}
+
+/* sticky nav bar helps users navigate the website faster and more efficiently as the user does not need to scroll back up to the top to access the navigation options */
+nav {
+  background-color: var(--col-02);
+  position: sticky;
+  top: 0;
+  padding: 2rem;
+  transition:2s;
+}
+
+nav li{
+  font-size: 1rem;
+  float: left;
+  list-style: none;
+  margin-right: 10px;
+}
+
+/*Segoe UI font mainly used in navigation for good readability and modern aesthetic*/
+nav a {
+  background-color: var(--col-02);
+  border-style: solid;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px;
+}
+
+/*hover over navigation to indicate to user the links are interactive*/
+/*utilizng the var colors to stay consistent with the color scheme of the webpage*/
+nav a:hover {
+  background-color:var(--col-04);
+  transition:none;
+  cursor:pointer;
+  transition:none;
+}
+
+nav a:active{
+  background-color: var(--col-01);
+  color:azure;
+  transition:none;
+}
+
+section{
+  margin-bottom: 2rem;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figcaption{
+  width: fit-content;
+}
+
+dl ul{
+  margin-bottom: 0;
+}
+
+li{
+  font-size: 1rem;
+}
+
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+.res-columns{
+  column-width: 25rem;
+}
+
+#mode-button{
+  float: right;
+  /* note the use of position: sticky to keep the button on the page even with scrolling */
+  position: sticky;
+  top: 1rem;
+  transition: 2s;
+  padding:10px;
+}
+
+/*hover function to indicate to user which state the button will turn to when clicked*/
+/*using the var colors which are linked to the javascript function to switch between the states
+in the hover form */
+#mode-button:hover{
+  background-color:var(--col-01);
+  color: var(--col-02);
+  transition: none;
+  cursor:pointer;
+}
+
+/* code for loading page */
+
+#load-body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* changing button to look like a link */
+/*Montserrat font gives a clean, modern look and inviting feel and is a very versatile font*/ 
+#load-link{
+  line-height: 1rem;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button:hover {
+  color: var(--col-03);
+}
+
+/* throbber while page is fake loading */
+#load-throbber{
+  /* the width, height and background-color give it a shape on the page without any content inside - 
+  these value are arbitrary, please change to create your own design  */
+  width: 100%;
+  height: 1rem;
+  background-color: var(--col-03);
+  /* we also initially set display to none so it only shows once the link is clicked */
+  display: none;
+  animation: loadingbar 10s infinite ease-in; /* implementing an animation function to simulate the loading bar loading up the hosono HTML page */
+  text-align: center;
+  color:azure;
+}
+
+@keyframes loadingbar {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+  width: 50%;
+  }
+}
+
+/* Media Queries */
+
+/* medium devices 600 - 992 */
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+
+}
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+
+}
+
+@media (prefers-reduced-motion) {
+  :root{
+    scroll-behavior: auto;
+  }
+}
