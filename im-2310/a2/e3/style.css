@@ -135,6 +135,8 @@ li ul{
 /*hover function to indicate to user which state the button will turn to when clicked*/
 /*using the var colors which are linked to the javascript function to switch between the states
 in the hover form */
+/*transition affects the hover state such that it takes longer for the background color to fade but can be an indicative feature which
+lets the user know which mode the webpage is in and which mode the user will switch to*/
 #mode-button:hover{
   background-color:var(--col-01);
   color: var(--col-02);
