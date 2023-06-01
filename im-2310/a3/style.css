@@ -1,0 +1,197 @@
+.container {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "panel-1 panel-2 panel-3"
+    "panel-4 panel-5 panel-6"
+    "panel-7 panel-8 panel-9"; 
+}
+.panel-1 { grid-area: panel-1; }
+.panel-2 { grid-area: panel-2; }
+.panel-3 { grid-area: panel-3; }
+.panel-4 { grid-area: panel-4; }
+.panel-5 { grid-area: panel-5; }
+.panel-6 { grid-area: panel-6; }
+.panel-7 { grid-area: panel-7; }
+.panel-8 { grid-area: panel-8; }
+.panel-9 { grid-area: panel-9; }
+
+
+.video-control-button{
+  width: 3rem;
+  height: 3rem;
+  padding: .1rem;
+  border: none;
+  cursor: pointer;
+  /* creating drop shadow on the buttons makes the buttons much more noticeable and eye-catching and creates the opportunity
+  to implement an engaging interactive element */
+  background-color: var(--col-04);
+  margin-top:20px;
+  margin-left:200px;
+  box-shadow: 2px 5px var(--col-01);
+}
+
+.modalContainer {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "panel-1 panel-1 panel-2"
+    "panel-3 panel-3 panel-3"
+    ". . .";
+}
+
+.panel-1 { grid-area: panel-1;
+}
+
+.panel-2 { grid-area: panel-2; 
+padding-top:50px;}
+
+.panel-3 { grid-area: panel-3; }
+
+
+
+#forwardButton{
+  background-image: url('./icons/fastForward.svg');
+}
+
+#circle-container{
+    width: 100%;
+    height:20rem;
+    align-content: center;
+    background-image: url('./background/kids-playground-summer-park-with-carousel/1361.jpg');
+    background-size:100%;
+    background-repeat: no-repeat;
+  }
+
+  #rounded-container{
+    width: 100%;
+    height:20rem;
+    align-content: center;
+    background-image: url('./background/high-school-concept-illustration/6596307.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  #rectangle-container{
+    width: 100%;
+    height:20rem;
+    align-content: center;
+    background-image: url('./background/office-background-video-conferencing/4207106.jpg');
+    background-size:100%;
+    background-repeat: no-repeat;
+  }
+  
+  #circleShape{
+    height: 8rem;
+    width: 8rem;
+    background-color:black;
+    border-radius: 50%;
+    box-shadow: 5px 10px black;
+    margin: 20%;
+  }
+  
+  #circleShape:hover{
+    cursor: pointer;
+  }
+
+  #circleShape:active{
+    box-shadow:none;
+  }
+
+  #roundedShape{
+    height: 10rem;
+    width: 14rem;
+    background-color:black;
+    border-radius: 25%;
+    box-shadow: 5px 10px black;
+    margin: 20%;
+  }
+
+  #roundedShape:hover{
+    cursor: pointer;
+  }
+
+  #roundedShape:active{
+    box-shadow:none;
+  }
+
+  #rectangleShape{
+    height: 12rem;
+    width: 18rem;
+    background-color:black;
+    box-shadow: 5px 10px black;
+    margin: 20%;
+  }
+
+  #rectangleShape:hover{
+    cursor: pointer;
+  }
+
+  #rectangleShape:active{
+    box-shadow:none;
+  }
+
+  #showModal{
+    background-color: #04AA6D;
+    padding: 10px;
+    font-family: 'Bubblegum Sans', cursive;
+    color: white;
+  }
+
+  #showModal:hover{
+    background-color:#616161;
+    cursor: pointer;
+  }
+
+  #modalDialog{
+    width:75%;
+    text-align:left;
+  }
+
+  #closeModal{
+    float:right;
+    padding:10px;
+    margin:10px;
+    cursor: pointer;
+  }
+
+h1{
+    margin-left:20px;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 50px;
+    animation:cycleColour 4s infinite;
+  }
+
+  @keyframes cycleColour {
+    25% {
+      color: blue;
+    }
+    50% {
+      color: greenyellow;
+    }
+    75% {
+      color: crimson;
+    }
+  }
+
+  div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+

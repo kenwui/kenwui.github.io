@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+ <head>
+
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Gochi+Hand&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+ </head>
+
+ <body>
+  <div class="container">
+    <div class="panel-1">
+
+      <h1>ID entity</h1>
+
+    </div>
+    <div class="panel-2"></div>
+    <div class="panel-3">
+      <!-- modal box for 500 word project description -->
+      <dialog id="modalDialog">
+        <div class="panel-1">
+          <button id="closeModal">Close</button>
+        </div>
+        <div class="panel-2">
+          <p>My abstract adjective is growth and my interactive design principle is agency.<br><br>
+            The main interaction I have planned based on the pairing is having a button which grows an element as the button is clicked.<br><br>
+            The design principle is agency because it is an interaction whereby something is made to happen in a dynamically responsive world. In the context of my idea, button is making the element grow when it is clicked on.
+            The idea that I have is to simulate the idea of growing up where an individual eventually finds their identity. How I will attempt to do this is through the portrayal of the individual as a shape and their identity being a set of randomized colours which will be flashing at different speeds based on the shape's progression along their stage of growth.<br><br>
+            The user will be able to move through the stages of growth by clicking on a fast forward button resulting in the shape growing larger while simultaneously, the speed of the colours being randomized slows down until eventually, the shape reaches "maturity" and the colours stop randomizing. At this point, the size of the shape also stops getting larger.<br><br>
+            I refined my idea slightly to convey the idea that the shape is moulded into something concrete and solid. I chose to use the circle shape for the initial phase as it is rounded, has no edges and straight lines which represents the idea of a child who has not yet found their identity.<br><br>
+            The user then navigates through the phases by clicking on the fast-forward button and the circle begins to show lose its roundness to become more squarish. Eventually, at the final stage, the shape becomes an absolute square with edges and straight lines indicating the shape has reached its final stage of maturity.
+            The main interaction is obviously to have a working fast-forward button which makes the shape grow larger and a colour randomizer that slows down as the user navigates through the phases. Some of the nice-to-have elements would be implementing a clipart background design such as playground, high school and office to better indicate the idea that the shape is “growing up”. Another idea that I had is to implement sounds such as kids playing at the park or somewhere outdoor, high school canteen sounds and office sounds such as printer, telephone and paper crumpling sounds in their respective phases.
+            I think one of the things I would find myself unsure to approach would be the colour randomizer and how I could change the speed of the colours randomizing according to which phase the shape is in.
+            Some visual planning work I did on my idea:
+            </p>
+        </div>
+        <div class="panel-3">
+          <div class="gallery">
+            <img src="Assignment 3/WhatsApp Image 2023-05-16 at 08.34.18.jpeg" alt="Cinque Terre" width="600" height="400">
+            <div class="desc">The basis for my idea is to have a simple layout on the webpage much like the dinosaur game from Chrome but instead of moving around the object, the user navigates through the phases of the shape by clicking the fast-forward button.</div>
+          </div>
+          
+          <div class="gallery">
+            <img src="Assignment 3/WhatsApp Image 2023-05-16 at 08.34.19.jpeg" alt="Forest" width="600" height="400">
+            <div class="desc">These are some additional nice-to-have elements.</div>
+          </div>
+        </div>
+      </dialog>
+      
+        <button id="showModal">Project Description</button>
+
+    </div>
+    <div class="panel-4"></div>
+    <div class="panel-5">
+      <div id="circle-container">
+        <button id="circleShape"></button>
+    </div>
+    <div class="panel-6">
+      <a href ="curvedRectangle.html"><button class="video-control-button" id="forwardButton"></button></a>
+    </div>
+    <div class="panel-7"></div>
+    <div class="panel-8"></div>
+    <div class="panel-9"></div>
+  </div>
+ </body>
+ 
+ <script src="circleScript.js"></script>
+
+</html>
