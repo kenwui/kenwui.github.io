@@ -20,13 +20,11 @@
 
 
 .video-control-button{
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   padding: .1rem;
   border: none;
   cursor: pointer;
-  /* creating drop shadow on the buttons makes the buttons much more noticeable and eye-catching and creates the opportunity
-  to implement an engaging interactive element */
   background-color: var(--col-04);
   margin-top:20px;
   margin-left:200px;
@@ -52,17 +50,47 @@ padding-top:50px;}
 
 .panel-3 { grid-area: panel-3; }
 
-
+  /* hover and active elements on button giving indication to the user that the buttons can be clicked on */
 
 #forwardButton{
   background-image: url('./icons/fastForward.svg');
+  background-repeat: no-repeat
 }
+
+#forwardButton:hover{
+  background-image: url('./icons/fastForward-hover.svg');
+  background-repeat: no-repeat;
+}
+
+#forwardButton:active{
+  background-image: url('./icons/fastForward-active.svg');
+  background-repeat: no-repeat;
+}
+
+#loopButton{
+  background-image: url('./icons/loop.svg');
+  background-repeat: no-repeat;
+}
+
+#loopButton:hover{
+  background-image: url('./icons/loop-hover.svg');
+  background-repeat: no-repeat;
+}
+
+#loopButton:active{
+  background-image: url('./icons/loop-active.svg');
+  background-repeat: no-repeat;
+}
+
+/* containers to define designated area for background images */
 
 #circle-container{
     width: 100%;
     height:20rem;
     align-content: center;
-    background-image: url('./background/kids-playground-summer-park-with-carousel/1361.jpg');
+    background-image: url('./background/kids-playground-summer-park-with-carousel/1361.jpg'); 
+    /* <a href="https://www.freepik.com/free-vector/kids-playground-summer-park-with-carousel_7588642.htm#query=cartoon%20playground&position=0&from_view=keyword&track=ais">
+    Image by upklyak</a> on Freepik */
     background-size:100%;
     background-repeat: no-repeat;
   }
@@ -72,6 +100,8 @@ padding-top:50px;}
     height:20rem;
     align-content: center;
     background-image: url('./background/high-school-concept-illustration/6596307.jpg');
+    /* <a href="https://www.freepik.com/free-vector/high-school-concept-illustration_22378302.htm#query=high%20school&position=8&from_view=keyword&track=ais">
+    Image by storyset</a> on Freepik */
     background-size: 100%;
     background-repeat: no-repeat;
   }
@@ -81,9 +111,12 @@ padding-top:50px;}
     height:20rem;
     align-content: center;
     background-image: url('./background/office-background-video-conferencing/4207106.jpg');
+    /* <a href="https://www.freepik.com/free-vector/office-background-video-conferencing_9681157.htm">Freepik</a> */
     background-size:100%;
     background-repeat: no-repeat;
   }
+
+  /* adding drop shadows to give indication to user that the shape can be interacted with */
   
   #circleShape{
     height: 8rem;
@@ -96,6 +129,7 @@ padding-top:50px;}
   
   #circleShape:hover{
     cursor: pointer;
+    box-shadow: 5px 10px black;
   }
 
   #circleShape:active{
@@ -135,8 +169,10 @@ padding-top:50px;}
     box-shadow:none;
   }
 
+  /* modal box for project description */
+
   #showModal{
-    background-color: #04AA6D;
+    background-color: black;
     padding: 10px;
     font-family: 'Bubblegum Sans', cursive;
     color: white;
@@ -158,6 +194,8 @@ padding-top:50px;}
     margin:10px;
     cursor: pointer;
   }
+
+  /* styling for the title of the project */
 
 h1{
     margin-left:20px;
