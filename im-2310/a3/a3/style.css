@@ -1,0 +1,235 @@
+.container {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "panel-1 panel-2 panel-3"
+    "panel-4 panel-5 panel-6"
+    "panel-7 panel-8 panel-9"; 
+}
+.panel-1 { grid-area: panel-1; }
+.panel-2 { grid-area: panel-2; }
+.panel-3 { grid-area: panel-3; }
+.panel-4 { grid-area: panel-4; }
+.panel-5 { grid-area: panel-5; }
+.panel-6 { grid-area: panel-6; }
+.panel-7 { grid-area: panel-7; }
+.panel-8 { grid-area: panel-8; }
+.panel-9 { grid-area: panel-9; }
+
+
+.video-control-button{
+  width: 4rem;
+  height: 4rem;
+  padding: .1rem;
+  border: none;
+  cursor: pointer;
+  background-color: var(--col-04);
+  margin-top:20px;
+  margin-left:200px;
+  box-shadow: 2px 5px var(--col-01);
+}
+
+.modalContainer {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "panel-1 panel-1 panel-2"
+    "panel-3 panel-3 panel-3"
+    ". . .";
+}
+
+.panel-1 { grid-area: panel-1;
+}
+
+.panel-2 { grid-area: panel-2; 
+padding-top:50px;}
+
+.panel-3 { grid-area: panel-3; }
+
+  /* hover and active elements on button giving indication to the user that the buttons can be clicked on */
+
+#forwardButton{
+  background-image: url('./icons/fastForward.svg');
+  background-repeat: no-repeat
+}
+
+#forwardButton:hover{
+  background-image: url('./icons/fastForward-hover.svg');
+  background-repeat: no-repeat;
+}
+
+#forwardButton:active{
+  background-image: url('./icons/fastForward-active.svg');
+  background-repeat: no-repeat;
+}
+
+#loopButton{
+  background-image: url('./icons/loop.svg');
+  background-repeat: no-repeat;
+}
+
+#loopButton:hover{
+  background-image: url('./icons/loop-hover.svg');
+  background-repeat: no-repeat;
+}
+
+#loopButton:active{
+  background-image: url('./icons/loop-active.svg');
+  background-repeat: no-repeat;
+}
+
+/* containers to define designated area for background images */
+
+#circle-container{
+    width: 100%;
+    height:20rem;
+    align-content: center;
+    background-image: url('./background/kids-playground-summer-park-with-carousel/1361.jpg'); 
+    /* <a href="https://www.freepik.com/free-vector/kids-playground-summer-park-with-carousel_7588642.htm#query=cartoon%20playground&position=0&from_view=keyword&track=ais">
+    Image by upklyak</a> on Freepik */
+    background-size:100%;
+    background-repeat: no-repeat;
+  }
+
+  #rounded-container{
+    width: 100%;
+    height:20rem;
+    align-content: center;
+    background-image: url('./background/high-school-concept-illustration/6596307.jpg');
+    /* <a href="https://www.freepik.com/free-vector/high-school-concept-illustration_22378302.htm#query=high%20school&position=8&from_view=keyword&track=ais">
+    Image by storyset</a> on Freepik */
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  #rectangle-container{
+    width: 100%;
+    height:20rem;
+    align-content: center;
+    background-image: url('./background/office-background-video-conferencing/4207106.jpg');
+    /* <a href="https://www.freepik.com/free-vector/office-background-video-conferencing_9681157.htm">Freepik</a> */
+    background-size:100%;
+    background-repeat: no-repeat;
+  }
+
+  /* adding drop shadows to give indication to user that the shape can be interacted with */
+  
+  #circleShape{
+    height: 8rem;
+    width: 8rem;
+    background-color:black;
+    border-radius: 50%;
+    box-shadow: 5px 10px black;
+    margin: 20%;
+  }
+  
+  #circleShape:hover{
+    cursor: pointer;
+    box-shadow: 5px 10px black;
+  }
+
+  #circleShape:active{
+    box-shadow:none;
+  }
+
+  #roundedShape{
+    height: 10rem;
+    width: 14rem;
+    background-color:black;
+    border-radius: 25%;
+    box-shadow: 5px 10px black;
+    margin: 20%;
+  }
+
+  #roundedShape:hover{
+    cursor: pointer;
+  }
+
+  #roundedShape:active{
+    box-shadow:none;
+  }
+
+  #rectangleShape{
+    height: 12rem;
+    width: 18rem;
+    background-color:black;
+    box-shadow: 5px 10px black;
+    margin: 20%;
+  }
+
+  #rectangleShape:hover{
+    cursor: pointer;
+  }
+
+  #rectangleShape:active{
+    box-shadow:none;
+  }
+
+  /* modal box for project description */
+
+  #showModal{
+    background-color: black;
+    padding: 10px;
+    font-family: 'Bubblegum Sans', cursive;
+    color: white;
+  }
+
+  #showModal:hover{
+    background-color:#616161;
+    cursor: pointer;
+  }
+
+  #modalDialog{
+    width:75%;
+    text-align:left;
+  }
+
+  #closeModal{
+    float:right;
+    padding:10px;
+    margin:10px;
+    cursor: pointer;
+  }
+
+  /* styling for the title of the project */
+
+h1{
+    margin-left:20px;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 50px;
+    animation:cycleColour 4s infinite;
+  }
+
+  @keyframes cycleColour {
+    25% {
+      color: blue;
+    }
+    50% {
+      color: greenyellow;
+    }
+    75% {
+      color: crimson;
+    }
+  }
+
+  div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+
