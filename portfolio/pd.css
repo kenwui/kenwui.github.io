@@ -196,6 +196,7 @@ header{
 	background-color:whitesmoke;
 	overflow:hidden;
 	font-size: large;
+	z-index: 9;
 }
 
 #navbar a {
